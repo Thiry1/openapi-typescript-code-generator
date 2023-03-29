@@ -143,6 +143,13 @@ export const create = (factory: TsGenerator.Factory.Type, params: CodeGenerator.
         ],
       }),
     }),
+    factory.ParameterDeclaration.create({
+      name: "baseUrl",
+      modifiers: undefined,
+      type: factory.TypeReferenceNode.create({
+        name: "string",
+      }),
+    }),
   );
 
   const hasParamsArguments =
